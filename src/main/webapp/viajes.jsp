@@ -46,6 +46,9 @@
       <th>Empresa de Seguros</th>
       <th>Número de Boleto</th>
       <th>Costo Total</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
     </thead>
     <tbody>
@@ -59,6 +62,8 @@
       <th><%=viajesbeans.getNombreEmpresaSeguro()%></th>
       <th><%=viajesbeans.getNumeroBoletos()%></th>
       <th>$150.00</th>
+      <th><button class="btn btn-primary btn-editar">Editar</button></th>
+      <th><button class="btn btn-danger btn-eliminar">Eliminar</button></th>
     </tr>
     <%}%>
     </tbody>

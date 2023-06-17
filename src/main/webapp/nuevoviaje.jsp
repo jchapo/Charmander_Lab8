@@ -1,5 +1,8 @@
+<%@page import="java.util.ArrayList" %>
+<%@ page import="charmander.Models.Beans.ViajesBeans" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
+<jsp:useBean scope="request" id="listarViajes" type="java.util.ArrayList<charmander.Models.Beans.ViajesBeans>"/>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
