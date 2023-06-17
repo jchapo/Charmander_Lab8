@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,8 +24,8 @@
 <nav class="navbar">
   <div class="container">
     <span class="navbar-brand">Nombre de Usuario</span>
-    <span class="navbar-text">Categor韆: Gold</span>
-    <button class="btn btn-light ml-auto">Cerrar sesi髇</button>
+    <span class="navbar-text">Categor铆a: Gold</span>
+    <button class="btn btn-light ml-auto">Cerrar sesi贸n</button>
   </div>
 </nav>
 
@@ -44,27 +45,27 @@
       <input type="number" id="edad" class="form-control" required>
     </div>
     <div class="form-group">
-      <label for="codigo-pucp">C骴igo PUCP</label>
+      <label for="codigo-pucp">C贸digo PUCP</label>
       <input type="text" id="codigo-pucp" class="form-control" required>
     </div>
     <div class="form-group">
-      <label for="correo">Correo Electr髇ico</label>
+      <label for="correo">Correo Electr贸nico</label>
       <input type="email" id="correo" class="form-control" required>
     </div>
     <div class="form-group">
       <label for="especialidad">Especialidad</label>
       <select id="especialidad" class="form-control" required>
-        <option value="">Seleccione una opci髇</option>
+        <option value="">Seleccione una opci贸n</option>
         <option value="Ing. Telecomunicaciones">Ing. Telecomunicaciones</option>
         <option value="Ing. Industrial">Ing. Industrial</option>
       </select>
     </div>
     <div class="form-group">
-      <label for="contrasena">Contrase馻</label>
+      <label for="contrasena">Contrase帽a</label>
       <input type="password" id="contrasena" class="form-control" required>
     </div>
     <div class="form-group">
-      <label for="confirmar-contrasena">Confirmar Contrase馻</label>
+      <label for="confirmar-contrasena">Confirmar Contrase帽a</label>
       <input type="password" id="confirmar-contrasena" class="form-control" required>
     </div>
     <button type="submit" class="btn btn-primary">Finalizar Registro</button>

@@ -1,31 +1,25 @@
 package charmander.charmander.Servlet;
 
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import Models.Beans.ViajesBeans;
+import Models.Daos.ViajesDao;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
+@WebServlet(name = "ServletViajes", value = "/ServletViajes")
 public class ServletViajes extends HttpServlet {
-    private String message;
-
-    public void init() {
-        message = "Hello World!";
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ViajesDao viajesDao = new ViajesDao();
+        request.setAttribute("ArrayViajes", viajesDao.tablaViajes());
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("viajes.jsp");
+        requestDispatcher.forward(request,response);
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
-    }
-
-    public void destroy() {
     }
 }

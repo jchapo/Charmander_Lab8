@@ -1,7 +1,9 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Añadir Viaje</title>
+  <title>AÃ±adir Viaje</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
   <style>
@@ -24,13 +26,13 @@
 <nav class="navbar">
   <div class="container">
     <span class="navbar-brand">Nombre de Usuario</span>
-    <span class="navbar-text">Categoría: Gold</span>
-    <button class="btn btn-light ml-auto">Cerrar sesión</button>
+    <span class="navbar-text">CategorÃ­a: Gold</span>
+    <button class="btn btn-light ml-auto">Cerrar sesiÃ³n</button>
   </div>
 </nav>
 
 <div class="container">
-  <h2>Añadir Nuevo Viaje</h2>
+  <h2>AÃ±adir Nuevo Viaje</h2>
   <form>
     <div class="form-group">
       <label for="ciudad-origen">Ciudad Origen</label>
@@ -39,7 +41,7 @@
     <div class="form-group">
       <label for="ciudad-destino">Ciudad Destino</label>
       <select id="ciudad-destino" class="form-control" required>
-        <option value="">Seleccione una opción</option>
+        <option value="">Seleccione una opciÃ³n</option>
         <option value="Chiclayo">Chiclayo</option>
         <option value="Arequipa">Arequipa</option>
       </select>
@@ -55,9 +57,9 @@
     <div class="form-group">
       <label for="empresa-seguros">Empresa de Seguros</label>
       <select id="empresa-seguros" class="form-control" required>
-        <option value="">Seleccione una opción</option>
+        <option value="">Seleccione una opciÃ³n</option>
         <option value="rimac">Rimac</option>
-        <option value="pacifico">Pacífico</option>
+        <option value="pacifico">PacÃ­fico</option>
       </select>
     </div>
     <div class="form-group">

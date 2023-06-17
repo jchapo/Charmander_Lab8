@@ -1,7 +1,8 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Página de Viajes</title>
+  <title>PÃ¡gina de Viajes</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <style>
     .navbar {
@@ -23,8 +24,8 @@
 <nav class="navbar">
   <div class="container">
     <span class="navbar-brand">Nombre de Usuario</span>
-    <span class="navbar-text">Categoría: Gold</span>
-    <button class="btn btn-light ml-auto">Cerrar sesión</button>
+    <span class="navbar-text">CategorÃ­a: Gold</span>
+    <button class="btn btn-light ml-auto">Cerrar sesiÃ³n</button>
   </div>
 </nav>
 
@@ -41,7 +42,7 @@
       <th>Ciudad Origen</th>
       <th>Ciudad Destino</th>
       <th>Empresa de Seguros</th>
-      <th>Número de Boleto</th>
+      <th>NÃºmero de Boleto</th>
       <th>Costo Total</th>
     </tr>
     </thead>
@@ -64,7 +65,7 @@
       <td>987654321</td>
       <td>$150.00</td>
     </tr>
-    <!-- Agrega más filas según tus necesidades -->
+    <!-- Agrega mÃ¡s filas segÃºn tus necesidades -->
     </tbody>
   </table>
 </div>

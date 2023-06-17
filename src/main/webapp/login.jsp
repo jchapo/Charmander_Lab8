@@ -1,7 +1,9 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Página de inicio de sesión</title>
+  <title>PÃ¡gina de inicio de sesiÃ³n</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <style>
     body {
@@ -18,15 +20,15 @@
     <div class="col-md-4">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title text-center">Iniciar sesión</h2>
+          <h2 class="card-title text-center">Iniciar sesiÃ³n</h2>
           <form>
             <div class="form-group">
               <label for="username">Nombre de usuario</label>
               <input type="text" class="form-control" id="username" placeholder="Ingrese su nombre de usuario" required>
             </div>
             <div class="form-group">
-              <label for="password">Contraseña</label>
-              <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+              <label for="password">ContraseÃ±a</label>
+              <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseÃ±a" required>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
           </form>
