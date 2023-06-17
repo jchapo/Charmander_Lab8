@@ -25,7 +25,7 @@ public class ServletViajes extends HttpServlet {
                 view = request.getRequestDispatcher("viajes.jsp");
                 view.forward(request, response);
                 break;
-            case "borrar":
+            /*case "borrar":
                 if (request.getParameter("id") != null) {
                     String employeeIdString = request.getParameter("id");
                     int employeeId = 0;
@@ -48,7 +48,7 @@ public class ServletViajes extends HttpServlet {
                 } else {
                     response.sendRedirect("EmployeeServlet?err=Error al borrar el empleado");
                 }
-                break;
+                break;*/
         }
     }
 /*

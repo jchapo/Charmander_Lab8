@@ -41,6 +41,7 @@
     <tr>
       <th>Identificador del Viaje</th>
       <th>Fecha de Reserva</th>
+      <th>Fecha de Viaje</th>
       <th>Ciudad Origen</th>
       <th>Ciudad Destino</th>
       <th>Empresa de Seguros</th>

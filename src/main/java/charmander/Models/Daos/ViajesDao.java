@@ -33,7 +33,7 @@ public class ViajesDao extends DaoBase{
 
         return listaViajes;
     }
-    public ViajesBeans obtenerViaje(int employeeId) {
+    /*public ViajesBeans obtenerViaje(int employeeId) {
 
         ViajesBeans viaje = null;
 
@@ -60,7 +60,7 @@ public class ViajesDao extends DaoBase{
         }
 
         return employee;
-    }
+    }*/
 
 
     private void fetchHistorialViajes(ViajesBeans v, ResultSet rs) throws SQLException {
