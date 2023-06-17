@@ -1,15 +1,11 @@
 package Models.Daos;
 import Models.Beans.ViajesBeans;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
-public class ViajesDao {
-    public ArrayList<ViajesBeans> tablaViajes() {
+public class ViajesDao extends DaoBase{
+    public ArrayList<ViajesBeans> listarViajes() {
 
         ArrayList<ViajesBeans> listaViajes = new ArrayList<>();
 
@@ -21,25 +17,13 @@ public class ViajesDao {
                 "INNER JOIN ciudades c1 ON hv.idCiudadOrigen = c1.idciudades\n" +
                 "INNER JOIN ciudades c2 ON hv.idCiudadDestino = c2.idciudades";
 
-        String url = "jdbc:mysql://localhost:3306/lab8";
-        String username = "root";
-        String password = "root";
+        try (Connection conn = this.getConection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
 
-        try (Connection connection = DriverManager.getConnection(url, username, password);
-             PreparedStatement stmt = connection.prepareStatement(sql);
-             ResultSet resultSet = stmt.executeQuery()) {
-
-            while (resultSet.next()) {
+            while (rs.next()) {
                 ViajesBeans v = new ViajesBeans();
-
-                v.setIdentificadorViaje(resultSet.getInt("identificadorViaje"));
-                v.setFechaReserva(resultSet.getDate("fechaReserva"));
-                v.setFechaViaje(resultSet.getDate("fechaViaje"));
-                v.setCiudadOrigen(resultSet.getString("CiudadOrigen"));
-                v.setCiudadDestino(resultSet.getString("CiudadDestino"));
-                v.setNombreEmpresaSeguro(resultSet.getString("nombreEmpresaSeguro"));
-                v.setNumeroBoletos(resultSet.getInt("numeroBoletos"));
-                v.setCostoViaje(resultSet.getInt("costoViaje"));
+                fetchHistorialViajes(v, rs);
                 listaViajes.add(v);
             }
 
@@ -49,6 +33,20 @@ public class ViajesDao {
 
         return listaViajes;
     }
+
+    private void fetchHistorialViajes(ViajesBeans v, ResultSet rs) throws SQLException {
+        v.setIdentificadorViaje(rs.getInt("identificadorViaje"));
+        v.setFechaReserva(rs.getDate("fechaReserva"));
+        v.setFechaViaje(rs.getDate("fechaViaje"));
+        v.setCiudadOrigen(rs.getString("CiudadOrigen"));
+        v.setCiudadDestino(rs.getString("CiudadDestino"));
+        v.setNombreEmpresaSeguro(rs.getString("nombreEmpresaSeguro"));
+        v.setNumeroBoletos(rs.getInt("numeroBoletos"));
+        v.setCostoViaje(rs.getInt("costoViaje"));
+
+    }
+
+
 }
 
 

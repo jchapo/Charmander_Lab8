@@ -1,15 +1,11 @@
-package charmander.charmander.Servlet;
+package charmander.Servlet;
 
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class ServletRegistroUsuario extends HttpServlet {
+public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {

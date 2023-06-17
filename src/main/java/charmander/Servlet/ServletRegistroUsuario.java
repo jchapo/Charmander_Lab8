@@ -1,4 +1,4 @@
-package charmander.charmander.Servlet;
+package charmander.Servlet;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class ServletNuevoViaje extends HttpServlet {
+public class ServletRegistroUsuario extends HttpServlet {
     private String message;
 
     public void init() {

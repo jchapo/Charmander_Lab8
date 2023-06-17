@@ -1,6 +1,5 @@
 package Models.Beans;
 
-import javax.swing.plaf.PanelUI;
 import java.util.Date;
 
 public class ViajesBeans {
