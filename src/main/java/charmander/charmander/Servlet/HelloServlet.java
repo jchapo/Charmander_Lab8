@@ -1,4 +1,4 @@
-package charmander.charmander;
+package charmander.charmander.Servlet;
 
 import java.io.*;
 import jakarta.servlet.http.*;
