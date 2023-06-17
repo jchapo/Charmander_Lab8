@@ -1,3 +1,5 @@
+<%@page import="charmander.Models.Beans.ViajesBeans" %>
+<jsp:useBean id="listaViajes" type="java.util.ArrayList<charmander.Models.Beans.ViajesBeans>" scope="request"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -47,25 +49,18 @@
     </tr>
     </thead>
     <tbody>
+    <%for (ViajesBeans viajesbeans : listaViajes) {%>
     <tr>
-      <td>1</td>
-      <td>2023-06-16</td>
-      <td>Ciudad Origen 1</td>
-      <td>Ciudad Destino 1</td>
-      <td>Seguros ABC</td>
-      <td>123456789</td>
-      <td>$100.00</td>
+      <th><%=viajesbeans.getIdentificadorViaje()%></th>
+      <th><%=viajesbeans.getFechaReserva()%></th>
+      <th><%=viajesbeans.getFechaViaje()%></th>
+      <th><%=viajesbeans.getCiudadOrigen()%></th>
+      <th><%=viajesbeans.getCiudadDestino()%></th>
+      <th><%=viajesbeans.getNombreEmpresaSeguro()%></th>
+      <th><%=viajesbeans.getNumeroBoletos()%></th>
+      <th>$150.00</th>
     </tr>
-    <tr>
-      <td>2</td>
-      <td>2023-06-17</td>
-      <td>Ciudad Origen 2</td>
-      <td>Ciudad Destino 2</td>
-      <td>Seguros XYZ</td>
-      <td>987654321</td>
-      <td>$150.00</td>
-    </tr>
-    <!-- Agrega más filas según tus necesidades -->
+    <%}%>
     </tbody>
   </table>
 </div>

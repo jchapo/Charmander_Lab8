@@ -1,4 +1,4 @@
-package Models.Beans;
+package charmander.Models.Beans;
 
 import java.util.Date;
 

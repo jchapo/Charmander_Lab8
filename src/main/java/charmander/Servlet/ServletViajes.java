@@ -1,13 +1,13 @@
 package charmander.Servlet;
 
-import Models.Daos.ViajesDao;
+import charmander.Models.Daos.ViajesDao;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "ServletViajes", value = {"/ServletViajes","viajes"})
+@WebServlet(name = "ServletViajes", value = {"/ServletViajes"})
 public class ServletViajes extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -20,15 +20,16 @@ public class ServletViajes extends HttpServlet {
 
         switch (action) {
             case "lista":
-                request.setAttribute("listaEmpleados", viajesDao.listarViajes());
-                view = request.getRequestDispatcher("employees/lista.jsp");
+                request.setAttribute("listaViajes", viajesDao.listarViajes());
+                view = request.getRequestDispatcher("viajes.jsp");
                 view.forward(request, response);
                 break;
-                
-    }
 
+        }
+    }
+/*
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    }
+    }*/
 }
