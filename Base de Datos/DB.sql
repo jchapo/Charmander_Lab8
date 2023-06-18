@@ -27,6 +27,7 @@ DROP TABLE IF EXISTS `ciudades`;
 CREATE TABLE `ciudades` (
   `idciudades` int NOT NULL,
   `nombreCiudad` varchar(45) NOT NULL,
+  `precioCiudad` varchar(45) NOT NULL,
   PRIMARY KEY (`idciudades`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -37,7 +38,7 @@ CREATE TABLE `ciudades` (
 
 LOCK TABLES `ciudades` WRITE;
 /*!40000 ALTER TABLE `ciudades` DISABLE KEYS */;
-INSERT INTO `ciudades` VALUES (1,'Puno'),(2,'Cusco'),(3,'Lima'),(4,'Tacna'),(5,'Tarapoto'),(6,'Arequipa'),(7,'Trujillo'),(8,'Apurimac');
+INSERT INTO `ciudades` VALUES (1,'Lima','0'),(2,'Cusco','100'),(3,'Lima','120'),(4,'Tacna','140'),(5,'Tarapoto','150'),(6,'Arequipa','160'),(7,'Trujillo','170'),(8,'Apurimac','180');
 /*!40000 ALTER TABLE `ciudades` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,4 +181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-17 18:44:44
+-- Dump completed on 2023-06-17 19:52:45
