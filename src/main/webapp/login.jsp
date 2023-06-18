@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <style>
     body {
-      background-image: url("ruta/de/la/imagen.jpg");
+      background-image: url("resources/assets/images/fondo.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -15,23 +15,30 @@
   </style>
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid ">
   <div class="row justify-content-center align-items-center" style="height: 100vh;">
     <div class="col-md-4">
       <div class="card">
         <div class="card-body">
           <h2 class="card-title text-center">Iniciar sesión</h2>
-          <form>
+          <form class="form-signin" method="POST" action="<%=request.getContextPath()%>/login">
             <div class="form-group">
-              <label for="username">Nombre de usuario</label>
-              <input type="text" class="form-control" id="username" placeholder="Ingrese su nombre de usuario" required>
+              <label for="inputEmail">Correo</label>
+              <input type="text" name="inputEmail" class="form-control" id="inputEmail" placeholder="Ingrese correo Pucp" autofocus="" required>
+
             </div>
             <div class="form-group">
               <label for="password">Contraseña</label>
-              <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+              <input type="password" class="form-control" id="password" name="inputPassword" placeholder="Ingrese su contraseña" required>
+              <% if (request.getAttribute("error") != null) { %>
+              <div class="text-danger mb-2"><% System.out.println(request.getAttribute("error"));%></div>
+              <% } %>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
           </form>
+          <div class="text-center d-flex justify-content-center align-items-center pt-3">
+            <label><a href="<%=request.getContextPath()%>/ServletRegistroUsuario">Soy nuevo y quiero registrarme</a></label>
+          </div>
         </div>
       </div>
     </div>
